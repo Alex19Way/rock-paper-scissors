@@ -1,0 +1,110 @@
+/* Global settings*/
+html{font-size: 62.5%;}
+*{-webkit-tap-highlight-color: transparent;}
+*:focus {outline: none;}
+h1{font-size: 8rem;}
+h2{font-size: 6.5rem;}
+h3{font-size: 3rem;}
+h4{font-size: 2.8rem;}
+h5{font-size: 5rem;}
+p{font-size: 2rem;}
+a{text-decoration: none;}
+body{
+    background: rgb(36, 36, 36); 
+    color: white;
+    font-family: 'Lacquer', cursive;
+    min-height: 100vh;
+    animation: fade-in 3s;
+}
+
+.title{
+    text-align: center;
+    margin: 5rem;
+    animation: fade-in 3s;
+}
+.frasi{
+    text-align: center;
+    padding: 0rem 5rem;
+    
+    
+}
+.frase-fissa{
+    text-align: center;
+    animation: fade-in 3s;
+    animation-delay: 9s;
+}
+
+.weapons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 4rem auto;
+    img{
+        width: 10vw;
+        border: solid 2px white;
+        border-radius: 10px;
+        padding: 3rem;
+        cursor: pointer;
+    }
+    img:hover{
+        animation: ingrandisci 1.5s infinite alternate;
+        transition: 1s;
+        box-shadow: 0px 0px 20px white;
+    }
+}
+.pointers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.pointers-box{
+    padding: 3rem 4rem;
+    h2{text-align: center;}
+}
+#battleresult{
+        text-align: center;
+        margin: 2rem 0rem;
+}
+
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      display: none;
+      pointer-events: none;
+    }
+    to {
+        display: flex;
+      opacity: 1;
+      pointer-events: all;
+      
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+
+@keyframes ingrandisci{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 740px){
+    .title{margin-top: 2rem;}
+    .weapons img{padding: 1.5rem;}
+}
