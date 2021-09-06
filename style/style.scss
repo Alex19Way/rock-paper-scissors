@@ -14,32 +14,81 @@ body{
     color: white;
     font-family: 'Lacquer', cursive;
     min-height: 100vh;
-    animation: fade-in 3s;
+    
 }
 
 .title{
     text-align: center;
-    margin: 5rem;
-    animation: fade-in 3s;
+    margin: 5rem 0rem;
+    animation: fade-in 2s;
 }
 .frasi{
     text-align: center;
     padding: 0rem 5rem;
-    
-    
+    #f1{
+        animation: fade-in-out 4s forwards;
+        visibility: hidden;
+        animation-delay: 1s;
+    }
+    #f2{
+        animation: fade-in-out 4s forwards;
+        transform: translateY(-100%);
+        visibility: hidden;
+        animation-delay: 5s;
+    }
+    #f3{
+        animation: fade-in-out 4s forwards;
+        transform: translateY(-200%);
+        visibility: hidden;
+        animation-delay: 9s;
+    }
+    #f4{
+        text-align: center;
+        animation: fade-in 2s forwards;
+        transform: translateY(-300%);
+        visibility: hidden;
+        animation-delay: 13s;
+    }
 }
-.frase-fissa{
-    text-align: center;
-    animation: fade-in 3s;
-    animation-delay: 9s;
-}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      pointer-events: none;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+  }
+
+  @keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+      }
+    50% {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+      }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+        display: none;
+      }
+    }
 
 .weapons{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 90%;
-    margin: 4rem auto;
+    margin: 0rem auto 0rem auto;
+    animation: fade-in 2s forwards;
+    visibility: hidden;
+    animation-delay: 14s;
     img{
         width: 10vw;
         border: solid 2px white;
@@ -59,6 +108,9 @@ body{
     align-items: center;
     text-align: center;
     margin-bottom: 5rem;
+    animation: fade-in 2s forwards;
+    visibility: hidden;
+    animation-delay: 15s;
 }
 .pointers-box{
     padding: 3rem 4rem;
@@ -68,31 +120,6 @@ body{
         text-align: center;
         margin: 2rem 0rem;
 }
-
-
-@keyframes fade-in {
-    from {
-      opacity: 0;
-      display: none;
-      pointer-events: none;
-    }
-    to {
-        display: flex;
-      opacity: 1;
-      pointer-events: all;
-      
-    }
-  }
-  
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-      display: none;
-    }
-  }
 
 
 @keyframes ingrandisci{
@@ -107,4 +134,10 @@ body{
 @media screen and (max-width: 740px){
     .title{margin-top: 2rem;}
     .weapons img{padding: 1.5rem;}
+    #f3{
+        margin-top: -10rem;
+    }
+    #f4{
+        margin-top: -10rem;
+}
 }

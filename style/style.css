@@ -44,15 +44,13 @@ body {
   color: white;
   font-family: 'Lacquer', cursive;
   min-height: 100vh;
-  -webkit-animation: fade-in 3s;
-          animation: fade-in 3s;
 }
 
 .title {
   text-align: center;
-  margin: 5rem;
-  -webkit-animation: fade-in 3s;
-          animation: fade-in 3s;
+  margin: 5rem 0rem;
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
 }
 
 .frasi {
@@ -60,12 +58,101 @@ body {
   padding: 0rem 5rem;
 }
 
-.frase-fissa {
-  text-align: center;
-  -webkit-animation: fade-in 3s;
-          animation: fade-in 3s;
+.frasi #f1 {
+  -webkit-animation: fade-in-out 4s forwards;
+          animation: fade-in-out 4s forwards;
+  visibility: hidden;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.frasi #f2 {
+  -webkit-animation: fade-in-out 4s forwards;
+          animation: fade-in-out 4s forwards;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  visibility: hidden;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.frasi #f3 {
+  -webkit-animation: fade-in-out 4s forwards;
+          animation: fade-in-out 4s forwards;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  visibility: hidden;
   -webkit-animation-delay: 9s;
           animation-delay: 9s;
+}
+
+.frasi #f4 {
+  text-align: center;
+  -webkit-animation: fade-in 2s forwards;
+          animation: fade-in 2s forwards;
+  -webkit-transform: translateY(-300%);
+          transform: translateY(-300%);
+  visibility: hidden;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@-webkit-keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  50% {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  50% {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
 }
 
 .weapons {
@@ -78,7 +165,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  margin: 4rem auto;
+  margin: 0rem auto 0rem auto;
+  -webkit-animation: fade-in 2s forwards;
+          animation: fade-in 2s forwards;
+  visibility: hidden;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
 }
 
 .weapons img {
@@ -110,6 +202,11 @@ body {
           align-items: center;
   text-align: center;
   margin-bottom: 5rem;
+  -webkit-animation: fade-in 2s forwards;
+          animation: fade-in 2s forwards;
+  visibility: hidden;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
 }
 
 .pointers-box {
@@ -123,55 +220,6 @@ body {
 #battleresult {
   text-align: center;
   margin: 2rem 0rem;
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-    display: none;
-    pointer-events: none;
-  }
-  to {
-    display: -webkit-box;
-    display: flex;
-    opacity: 1;
-    pointer-events: all;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    display: none;
-    pointer-events: none;
-  }
-  to {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 1;
-    pointer-events: all;
-  }
-}
-
-@-webkit-keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
-}
-
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
 }
 
 @-webkit-keyframes ingrandisci {
@@ -202,6 +250,12 @@ body {
   }
   .weapons img {
     padding: 1.5rem;
+  }
+  #f3 {
+    margin-top: -10rem;
+  }
+  #f4 {
+    margin-top: -10rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
