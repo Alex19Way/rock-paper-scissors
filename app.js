@@ -29,12 +29,10 @@ function battle(s1){
             break;
     }
     if(user==3) {
-        alert("The world is save");
-        location.reload();
+        window.location.href = "destiny/win.html";
     }
     if(computer==3) {
-        alert("The world is lost...forever");
-        location.reload();
+        window.location.href = "destiny/loose.html";
     }
 }
 
