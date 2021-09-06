@@ -49,6 +49,7 @@ body {
 .title {
   text-align: center;
   margin: 5rem 0rem;
+  padding: 0rem 4rem;
   -webkit-animation: fade-in 2s;
           animation: fade-in 2s;
 }
@@ -165,7 +166,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  margin: 0rem auto 0rem auto;
+  margin: -5vh auto 0rem auto;
   -webkit-animation: fade-in 2s forwards;
           animation: fade-in 2s forwards;
   visibility: hidden;
@@ -252,10 +253,13 @@ body {
     padding: 1.5rem;
   }
   #f3 {
-    margin-top: -10rem;
+    margin-top: -6rem;
   }
   #f4 {
-    margin-top: -10rem;
+    margin-top: -7rem;
+  }
+  .frasi {
+    padding: 0rem 2rem;
   }
 }
 
