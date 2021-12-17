@@ -48,8 +48,7 @@ body {
 
 .title {
   text-align: center;
-  margin: 5rem 0rem;
-  padding: 0rem 2rem;
+  margin: 5rem;
   -webkit-animation: fade-in 2s;
           animation: fade-in 2s;
 }
@@ -70,8 +69,8 @@ body {
 .frasi #f2 {
   -webkit-animation: fade-in-out 4s forwards;
           animation: fade-in-out 4s forwards;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
   visibility: hidden;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
@@ -80,8 +79,8 @@ body {
 .frasi #f3 {
   -webkit-animation: fade-in-out 4s forwards;
           animation: fade-in-out 4s forwards;
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
+  -webkit-transform: translateY(-10rem);
+          transform: translateY(-10rem);
   visibility: hidden;
   -webkit-animation-delay: 9s;
           animation-delay: 9s;
@@ -91,50 +90,62 @@ body {
   text-align: center;
   -webkit-animation: fade-in 2s forwards;
           animation: fade-in 2s forwards;
-  -webkit-transform: translateY(-300%);
-          transform: translateY(-300%);
+  -webkit-transform: translateY(-15rem);
+          transform: translateY(-15rem);
   visibility: hidden;
   -webkit-animation-delay: 13s;
           animation-delay: 13s;
 }
 
+.skip {
+  border: none;
+  margin-left: 90%;
+  font-family: 'Lacquer', cursive;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: solid 1.5px white;
+  padding: 0.5rem 1rem;
+  opacity: 0.5;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+  font-size: 2rem;
+  -webkit-animation: fade-in-out2 14s forwards;
+          animation: fade-in-out2 14s forwards;
+}
+
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
-    pointer-events: none;
   }
   to {
     visibility: visible;
     opacity: 1;
-    pointer-events: all;
   }
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
-    pointer-events: none;
   }
   to {
     visibility: visible;
     opacity: 1;
-    pointer-events: all;
   }
 }
 
 @-webkit-keyframes fade-in-out {
   0% {
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
   }
   50% {
     opacity: 1;
-    pointer-events: all;
     visibility: visible;
   }
   100% {
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
     display: none;
   }
 }
@@ -142,16 +153,55 @@ body {
 @keyframes fade-in-out {
   0% {
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
   }
   50% {
     opacity: 1;
-    pointer-events: all;
     visibility: visible;
   }
   100% {
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@-webkit-keyframes fade-in-out2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  10% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  90% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@keyframes fade-in-out2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  10% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  90% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
     display: none;
   }
 }
@@ -166,7 +216,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
-  margin: -5vh auto 0rem auto;
+  margin: -5rem auto 0rem auto;
   -webkit-animation: fade-in 2s forwards;
           animation: fade-in 2s forwards;
   visibility: hidden;
@@ -175,10 +225,10 @@ body {
 }
 
 .weapons img {
-  width: 10vw;
+  width: 8vw;
   border: solid 2px white;
   border-radius: 10px;
-  padding: 3rem;
+  padding: 2rem;
   cursor: pointer;
 }
 
@@ -247,20 +297,18 @@ body {
 
 @media screen and (max-width: 740px) {
   .title {
-    margin-top: 2rem;
+    margin: 2rem 0rem;
   }
   .weapons img {
     padding: 1.5rem;
   }
-  #f3 {
-    margin-top: -6rem;
-  }
-  #f4 {
-    margin-top: -8rem;
-  }
   .frasi {
-    padding: 0rem 2rem;
+    padding: 0rem 4rem;
   }
+}
+
+.dissapear {
+  display: none;
 }
 
 /*WIN-LOST SETTINGS*/
